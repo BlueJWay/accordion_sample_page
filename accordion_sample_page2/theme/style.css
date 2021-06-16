@@ -1,0 +1,54 @@
+/*
+Theme Name: Accordion
+Theme URL: https://accordion-sample-page.000webhostapp.com/
+Description: THe Accordion Theme
+Version: 1.0
+Author: bflood
+Author URL: https://accordion-sample-page.000webhostapp.com/
+*/
+
+
+
+.accordion{
+    width: 80%;
+    color: #2F2F2F;
+    background-color: #FFFFFF;
+    margin: auto;
+    cursor: auto;
+    border: 1px solid #F4F4F4;
+}
+.accordion_title{
+    font-family: Helvetica;
+    font-size: 50px;
+    display: inline;
+    border-left: none;
+    height: 50px;
+    width: 100%;
+    padding-left: 0px;
+    cursor: default;
+}
+.plus{
+    color: #D3B558;
+    margin: auto;
+    cursor: pointer;
+    height: 50px;
+    display: inline-block;
+    font-size: 50px;
+    font-family: Helvetica;
+    border-right: none;
+    width: 50px;
+    padding-right: 0px;
+    text-align: center;
+}
+.accordion_content{
+    width: 80%;
+    font-family: "Crimson Text";
+    display: none;
+    margin: auto;
+    border: solid #F4F4F4 1px;
+    border-left: none;
+    font-size: medium;
+    height: 100px;
+    box-shadow: 0 4px 6px -2px rgb(0 0 0 / 20%);
+    padding-left: 0px;
+}

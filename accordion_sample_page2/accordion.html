@@ -1,0 +1,112 @@
+<title>
+    Accordion Sample Page
+</title>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+   <link href="accordion_style.css" rel="stylesheet">
+    <style>
+.accordion{
+    width: 80%;
+    color: #2F2F2F;
+    background-color: #FFFFFF;
+    margin: auto;
+    cursor: auto;
+    border: 1px solid #F4F4F4;
+}
+.accordion_title{
+    font-family: Helvetica;
+    font-size: 50px;
+    display: inline;
+    border-left: none;
+    height: 50px;
+    width: 100%;
+    padding-left: 0px;
+    cursor: default;
+}
+.plus{
+    color: #D3B558;
+    margin: auto;
+    cursor: pointer;
+    height: 50px;
+    display: inline-block;
+    font-size: 50px;
+    font-family: Helvetica;
+    border-right: none;
+    width: 50px;
+    padding-right: 0px;
+    text-align: center;
+}
+.accordion_content{
+    width: 80%;
+    font-family: "Crimson Text";
+    display: none;
+    margin: auto;
+    border: solid #F4F4F4 1px;
+    border-left: none;
+    font-size: medium;
+    height: 100px;
+    box-shadow: 0 4px 6px -2px rgb(0 0 0 / 20%);
+    padding-left: 0px;
+}
+    </style>
+    
+</head>
+<body>
+    <main>
+        <div class = "accordion">
+            <p id = "plus" class = "plus">
+                +
+            </p>
+            <p class = "accordion_title">
+                Sample Text
+            </p>
+        </div>
+            <p class = "accordion_content">
+                
+                Here is the hidden component
+            </p>
+        <div id = "Empty sidebar">
+
+        </div>
+        <div id = "Empty footer">
+            
+        </div>
+        
+    </main>
+    <script>
+        let accordion_top = document.querySelector('.accordion');
+        let menuContent = document.querySelector('.accordion_content');
+        let plusbutton = document.querySelector('.plus');
+        let plusminus = document.getElementById("plus");
+        plusbutton.addEventListener('click',()=>{
+           if(menuContent.style.display===""){
+              menuContent.style.display="block";
+              plusminus.innerHTML = "-";
+
+           } else {
+              menuContent.style.display="";
+              plusminus.innerHTML = "+"
+           }
+        })
+        plusbutton.addEventListener('mouseover',()=>{
+            accordion_top.style.backgroundColor="#D3B558";
+            plusbutton.style.backgroundColor="#D3B558";
+            plusbutton.style.color="#FFFFFF";
+        })
+        accordion_top.addEventListener('mouseover',()=>{
+            accordion_top.style.backgroundColor="#D3B558";
+            plusbutton.style.backgroundColor="#D3B558";
+            plusbutton.style.color="#FFFFFF";
+        })
+        plusbutton.addEventListener('mouseout',()=>{
+            accordion_top.style.backgroundColor="#FFFFFF";
+            plusbutton.style.backgroundColor="#FFFFFF";
+            plusbutton.style.color="#2F2F2F";
+        })
+        accordion_top.addEventListener('mouseout',()=>{
+            accordion_top.style.backgroundColor="#FFFFFF";
+            plusbutton.style.backgroundColor="#FFFFFF";
+            plusbutton.style.color="#2F2F2F";
+        })
+    </script>
+</body>
